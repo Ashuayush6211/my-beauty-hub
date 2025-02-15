@@ -1,0 +1,6 @@
+.logoContainer {
+  position: fixed; /* Fixed position to keep the logo in place */
+  top: 20px; /* Distance from the top */
+  left: 20px; /* Distance from the left */
+  z-index: 1000; /* Ensure the logo stays on top of other content */
+}
