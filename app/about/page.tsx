@@ -134,6 +134,8 @@ export default function About() {
                 >
                   Submit
                 </button>
+
+                <div> |Testing....</div>
               </div>
             </form>
           </div>
