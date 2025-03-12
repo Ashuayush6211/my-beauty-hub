@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 
 const Navbar = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -71,11 +72,13 @@ const Navbar = () => {
       <div className="bg-white shadow-md h-16 flex items-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex justify-between items-center">
           <Link href="/">
-            <img
-              src="/Urs.jpg"
-              alt="Urs Beauty Hub Logo"
-              className="h-14 w-auto object-contain"
-            />
+          <Image
+           src="/Urs.jpg"
+           alt="Urs Beauty Hub Logo"
+           width={200} // Set a fixed width
+           height={56} // Set a fixed height
+           className="h-14 w-auto object-contain"
+          />
           </Link>
           <div className="hidden md:flex space-x-8">
             <Link href="/" className="text-gray-800 hover:text-gray-600">
