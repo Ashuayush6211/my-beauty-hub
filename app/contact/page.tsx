@@ -4,18 +4,18 @@ import Image from "next/image";
 const contacts = [
   {
     name: "Sonali More",
-    role: "Admin & Customer Relations",
+    role: "Customer Service Specialist",
     image: "/Sony4.jpeg", // Replace with actual image URL
     description:"Sonali is the Admin & Customer Service at My Beauty Hub, where she oversees customer relations, ensuring an exceptional experience for all our clients. She handles customer inquiries and ensures smooth operations at the hub.",
-    email: "sonali@mybeautyhub.com",
+    email: "sonali@ursbeautyhub.com",
     phone: "+91 9702358551",
   },
   {
     name: "Chandrakala Kowrati",
-    role: "Customer Service Executive",
+    role: "Customer Service Specialist",
     image: "/Anus.jpeg", // Replace with actual image URL
     description: "Chandrakala is a customer care executive in beauty hub services excels in providing personalized assistance, resolving inquiries, and ensuring a seamless and delightful client experience.",
-    email: "hello@mybeautyhub.com",
+    email: "hello@ursbeautyhub.com",
     phone: "+91 9324118816",
   },
   {
