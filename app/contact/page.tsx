@@ -4,27 +4,27 @@ import Image from "next/image";
 const contacts = [
   {
     name: "Sonali More",
-    role: "Lead Stylist",
-    image: "/Sonali.jpg", // Replace with actual image URL
-    description: "John is an expert in creating stunning hair styles and making our clients look their best.",
-    email: "sonali@mybeautyhub.in",
-    phone: "+91 1234567890",
+    role: "Admin & Customer Relations",
+    image: "/Sony4.jpeg", // Replace with actual image URL
+    description:"Sonali is the Admin & Customer Service at My Beauty Hub, where she oversees customer relations, ensuring an exceptional experience for all our clients. She handles customer inquiries and ensures smooth operations at the hub.",
+    email: "sonali@mybeautyhub.com",
+    phone: "+91 9702358551",
   },
   {
-    name: "Anu Kowrati",
-    role: "Makeup Artist",
+    name: "Chandrakala Kowrati",
+    role: "Customer Service Executive",
     image: "/Anus.jpeg", // Replace with actual image URL
-    description: "Jane specializes in flawless makeup application for all occasions.",
-    email: "anu@mybeautyhub.in",
-    phone: "+91 9876543210",
+    description: "Chandrakala is a customer care executive in beauty hub services excels in providing personalized assistance, resolving inquiries, and ensuring a seamless and delightful client experience.",
+    email: "hello@mybeautyhub.com",
+    phone: "+91 9324118816",
   },
   {
-    name: "Yashu Singh",
-    role: "Facial Specialist",
-    image: "/Yashu.png", // Replace with actual image URL
-    description: "Emma provides the best facial treatments that leave your skin glowing and rejuvenated.",
-    email: "yashu@mybeautyhub.in",
-    phone: "+91 5647382910",
+    name: "Siva Kowrati",
+    role: "Marketing & Web Developer",
+    image: "/Siva1.jpg", // Replace with actual image URL
+    description: "Siva is a skilled marketing and website developer who combines strategic branding with cutting-edge web design to drive engagement and business growth.",
+    email: "sivavenkat.aj@gmail.com",
+    phone: "+91 9892845335",
   },
 ];
 
@@ -41,7 +41,7 @@ function Contact() {
               alt={contact.name}
               width={300}
               height={300}
-              className="w-full h-48 object-cover rounded-full mb-4 mx-auto"
+              className="w-full h-60  mb-1 mx-auto"
             />
             <h2 className="text-xl font-semibold text-center">{contact.name}</h2>
             <p className="text-center text-gray-500">{contact.role}</p>

@@ -2,147 +2,67 @@
 import { useState } from "react";
 
 export default function About() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    service: "",
-  });
-
-  // Handle form data change
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
-  // Handle form submission
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Booking Details:", formData);
-    // Here you can add an API call to send form data to your server
-    setIsModalOpen(false); // Close the modal after submission
-  };
-
   return (
-    <div className="max-w-4xl mx-auto p-6">
-      <h1 className="text-3xl font-bold text-center mb-6">About My Beauty Hub</h1>
-      <p className="text-gray-700 text-lg leading-relaxed">
-        Welcome to My Beauty Hub, your ultimate destination for luxury beauty treatments. 
-        We are dedicated to providing top-notch services that make you feel relaxed, rejuvenated, 
-        and confident in your own skin.
-      </p>
+    <div className="max-w-5xl mx-auto p-6">
+      <h1 className="text-3xl font-bold text-center mb-8">About Urs Beauty Hub</h1>
 
-      <h2 className="text-2xl font-semibold mt-6">Our Mission</h2>
-      <p className="text-gray-700">
-        At My Beauty Hub, our mission is to bring world-class beauty services to everyone. 
-        From skincare treatments to hair styling, we ensure that each client receives personalized care and attention.
-      </p>
-
-      <h2 className="text-2xl font-semibold mt-6">Why Choose Us?</h2>
-      <ul className="list-disc ml-6 text-gray-700">
-        <li>Professional & certified beauty experts</li>
-        <li>High-quality beauty products & tools</li>
-        <li>Relaxing & hygienic environment</li>
-        <li>Customized treatments for all skin types</li>
-      </ul>
-
-      <h2 className="text-2xl font-semibold mt-6">Visit Us</h2>
-      <p className="text-gray-700">
-        We are open from <strong>9:00 AM - 8:00 PM (Wednesday to Monday)</strong>.  
-        Book an appointment today and experience beauty like never before.
-      </p>
-
-      {/* Book Now Button */}
-      <div className="text-center mt-8">
-        <button
-          onClick={() => setIsModalOpen(true)}
-          className="inline-block px-6 py-3 bg-blue-600 text-white text-lg font-semibold rounded-md hover:bg-blue-700 transition"
-        >
-          Book Now
-        </button>
+      {/* Section 1 - Image Left, Content Right */}
+      <div className="flex flex-col md:flex-row items-center mb-12">
+        <img
+          src="/Image2.jpg"
+          alt="Luxury Beauty Treatment"
+          className="w-full md:w-1/2 rounded-lg shadow-lg"
+        />
+        <div className="md:ml-8 mt-6 md:mt-0 md:w-1/2">
+          <p className="text-gray-700 text-lg leading-relaxed">
+            Welcome to Urs Beauty Hub, where luxury meets convenience, and self-care becomes an experience like never before. We are more than just a beauty service—we are your personal haven for relaxation, transformation, and confidence. At Urs Beauty Hub, we believe that beauty is not just about looking good but feeling incredible from within. Whether you’re preparing for a special occasion, indulging in much-needed self-care, or simply looking to enhance your natural glow, our expert beauticians bring salon-quality treatments right to your doorstep. From flawless bridal makeup and expert hair styling to rejuvenating facials, soothing massages, nail art, and advanced skincare, we provide a wide range of beauty services tailored to your unique needs. Our commitment to hygiene, safety, and customer satisfaction ensures that you receive premium-quality treatments in the comfort of your home, without compromising on luxury. With a passion for perfection and a mission to redefine at-home beauty care, Urs Beauty Hub is here to pamper you, uplift your confidence, and help you shine inside and out. Because you deserve nothing but the best—every single day! ✨💖
+          </p>
+        </div>
       </div>
 
-      {/* Booking Form Modal */}
-      {isModalOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
-          <div className="bg-white p-6 rounded-md w-96">
-            <h2 className="text-2xl font-semibold text-center mb-4">Book Your Appointment</h2>
-
-            <form onSubmit={handleSubmit}>
-              <div className="mb-4">
-                <label className="block text-sm font-medium">Your Name</label>
-                <input
-                  type="text"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  className="w-full p-2 border border-gray-300 rounded-md"
-                />
-              </div>
-              <div className="mb-4">
-                <label className="block text-sm font-medium">Your Email</label>
-                <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  className="w-full p-2 border border-gray-300 rounded-md"
-                />
-              </div>
-              <div className="mb-4">
-                <label className="block text-sm font-medium">Your Phone</label>
-                <input
-                  type="text"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  required
-                  className="w-full p-2 border border-gray-300 rounded-md"
-                />
-              </div>
-              <div className="mb-4">
-                <label className="block text-sm font-medium">Choose Service</label>
-                <select
-                  name="service"
-                  value={formData.service}
-                  onChange={handleChange}
-                  required
-                  className="w-full p-2 border border-gray-300 rounded-md"
-                >
-                  <option value="">Select a Service</option>
-                  <option value="Facial Treatment">Facial Treatment</option>
-                  <option value="Hair Styling">Hair Styling</option>
-                  <option value="Manicure & Pedicure">Manicure & Pedicure</option>
-                  <option value="Makeup Services">Makeup Services</option>
-                </select>
-              </div>
-
-              <div className="flex justify-between">
-                <button
-                  type="button"
-                  onClick={() => setIsModalOpen(false)}
-                  className="px-4 py-2 bg-gray-500 text-white rounded-md"
-                >
-                  Cancel
-                </button>
-                <button
-                  type="submit"
-                  className="px-4 py-2 bg-blue-600 text-white rounded-md"
-                >
-                  Submit
-                </button>
-
-                <div> |Testing....</div>
-              </div>
-            </form>
-          </div>
+      {/* Section 2 - Content Left, Image Right */}
+      <div className="flex flex-col md:flex-row items-center mb-12">
+        <div className="md:mr-8 md:w-1/2">
+          <h2 className="text-2xl font-semibold mb-2">Our Mission</h2>
+          <p className="text-gray-700 text-lg">
+            At Urs Beauty Hub, we are dedicated to delivering world-class beauty services that go beyond expectations, combining the finest luxury treatments, rejuvenating experiences, and expert care to ensure every client not only looks their best but feels truly pampered, confident, and radiant from the inside out.
+          </p>
         </div>
-      )}
+        <img
+          src="/Image1.jpg"
+          alt="Beauty Hub Mission"
+          className="w-full md:w-1/2 rounded-lg shadow-lg"
+        />
+      </div>
+
+      {/* Section 3 - Content Only */}
+      <div className="mb-12">
+        <h2 className="text-2xl font-semibold mb-2">Why Choose Us?</h2>
+        <ul className="list-disc ml-6 text-gray-700">
+          <li>Professional & certified beauty experts</li>
+          <li>High-quality beauty products & tools</li>
+          <li>Relaxing & hygienic environment</li>
+          <li>Customized treatments for all skin types</li>
+        </ul>
+      </div>
+
+      {/* Section 4 - Content Only */}
+      <div className="mb-12">
+        <h2 className="text-2xl font-semibold mb-2">Service Locations</h2>
+        <p className="text-gray-700">
+          Currently serving <strong>Kalyan & Dombivli</strong>. Expanding soon across <strong>Mumbai & Thane</strong> districts.
+        </p>
+      </div>
+
+      {/* Section 5 - Content Only */}
+      <div className="mb-12">
+        <h2 className="text-2xl font-semibold mb-2">To Book Our Services</h2>
+        <p className="text-gray-700">
+          <strong className="text-blue-600">
+            Click the "Book Now" button at the top or contact us instantly via Call, Email, or WhatsApp! 🚀
+          </strong>
+        </p>
+      </div>
     </div>
   );
 }
-
-

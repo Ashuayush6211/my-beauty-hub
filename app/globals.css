@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -16,4 +17,43 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+/* Marquee Effect for Scrolling Offers */
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  background-color: #dc2626; /* Red background */
+  color: white;
+  padding: 10px 0;
+}
+
+.marquee-text {
+  display: inline-block;
+  animation: marquee 12s linear infinite;
+  font-weight: bold;
+  font-size: 0.875rem; /* Small text */
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  min-width: 100%;
+  white-space: nowrap;
+  animation: marqueeScroll 10s linear infinite;
 }
